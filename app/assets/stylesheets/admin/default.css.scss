@@ -128,15 +128,16 @@ border-radius:5px;width:302px;margin:0 auto}
 .page .active a{background:image-url("list.jpg") 0 0 repeat-x;border:1px solid #ccc}
 
 /*-----------------------------------------------------------------------欄位---*/
-
+.field_with_errors { float: none!important; }
 .text{border:1px solid #ccc;background:#F9F9F9;border-radius:5px;overflow:hidden;padding:10px 10px 10px 0}
 .text div{float:left;padding:5px;line-height:1.5em}
 .text th{font-weight:900;width:80px;}
+.text th .field_with_errors { float: none; display: inline; padding: 0; margin: 0; color: #900; font-weight: 600;}
 .text td{text-align:left}
 
 .text .one{width:100%;clear:both}
 
-.text-edit input,.text-edit textarea{width:100%;border-radius:5px;border:1px solid #ccc!important;padding:5px;font:300 13px 新細明體;background:#fff;color:#555}
+.text-edit input,.text-edit textarea, .field_with_errors input{width:100%;border-radius:5px;border:1px solid #ccc!important;padding:5px;font:300 13px 新細明體;background:#fff;color:#555}
 .text-edit textarea{min-height:100px}
 .text-edit th{padding:7px 0 0 0}
 .text-edit .radio{width:30px;border:none;padding:0;position:relative;top:3px}
