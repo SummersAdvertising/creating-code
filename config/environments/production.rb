@@ -1,3 +1,12 @@
+def compile_asset?(path)
+  if File.basename(path) =~ /^[^_].*\.\w+$/
+    puts "Compiling: #{path}"
+    true
+  else
+    puts "Ignoring: #{path}"
+    false
+  end
+end
 CreatingCode::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -58,6 +67,8 @@ CreatingCode::Application.configure do
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
 
+  config.assets.precompile = [ method(:compile_asset?).to_proc ]
+  
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
