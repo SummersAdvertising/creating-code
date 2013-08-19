@@ -2,7 +2,7 @@ class Admin::PostsController < AdminController
   # GET /admin/posts
   # GET /admin/posts.json
   def index
-    @posts = Post.page( params[:page] ).per(1)
+    @posts = Post.page( params[:page] ).per(20)
 
     respond_to do |format|
       format.html # index.html.erb
