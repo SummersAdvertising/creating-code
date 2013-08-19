@@ -1,0 +1,61 @@
+<%= form_for([:admin, @post]) do |f| %>
+<section class="title">
+
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this admin_post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th><%= @post.created_at.to_s( :date ) %></th>
+          <td><%= @post.contact_name %><span class="counter"><%= @post.contact_email %></span></td>
+        </tr>
+      </table>
+    </section>
+    <!--title-->
+       <section class="text text-show">  
+      <div class="one">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top">問題</th>
+            <td><%= @post.content %></td>
+          </tr>
+        </table>
+      </div>
+      </section><!--text-->
+       <section class="text text-edit">  
+      <div class="one">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top"><span><%= f.label :response, '回覆' %></span></th>
+            <td><%= f.text_area :response, { :class => 'autogrow' }%></td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top"><span>顯示</span></th>
+            <td>
+                <%= f.radio_button :status, 'enable', { :class => 'radio'} %> 是 
+                <%= f.radio_button :status, 'disable', { :class => 'radio'} %> 否
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section class="button"> 
+    <%= f.submit "發佈", { :style => "display: none;" } %> 
+    <a href="javascript: $('input:submit[name=commit]').click();">    
+    <img src="<%= image_path("upload.png") %>">發佈</a>
+    
+    <a href="<%= admin_posts_path %>">    
+    <img src="<%= image_path("cancel.png") %>">取消</a> </section>
+    <!--button--> 
+<% end %>

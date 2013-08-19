@@ -1,0 +1,43 @@
+/*---全域背景---*/
+html,.login-main{background:#E7EBF4!important}
+
+/*---上方列---*/
+header{}
+
+/*---標題---*/
+h1 a{}
+
+/*---內容邊框---*/
+article{}
+
+/*---頁尾---*/
+footer{}
+footer a{}
+
+/*---內容---*/
+#nav-1{background-image:image-url("nav-04.png")}
+#nav-2{background-image:image-url("nav-05.png")}
+nav .active #nav-1{background-image:image-url("nav-04a.png")}
+nav .active #nav-2{background-image:image-url("nav-05a.png")}
+
+/*-----------------------------------------------------------------------內容---*/
+
+@media screen and (max-width: 543px){
+#nav-ctrl,aside{}
+#nav-ctrl:hover,aside:hover{}
+#nav-ctrl:active,aside:active{}
+}
+
+@media screen and (min-width: 544px) and (max-width: 896px){
+nav .active a{}
+#aside-box a{}
+#aside-box a:hover{}
+nav li a{}
+}
+
+@media screen and (min-width: 897px){
+nav .active a{}
+#aside-box a{}
+#aside-box a:hover{}
+nav li a{}
+}

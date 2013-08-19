@@ -1,0 +1,36 @@
+<%= form_for @post do | f | %>
+<div>
+        <%= f.label :title %>   
+        <%= f.text_field :title %>
+</div>
+
+<div>
+        <%= f.label :content %> 
+        <%= f.text_area :content %>
+</div>
+
+<div>
+        <%= f.label :contact_name %>    
+        <%= f.text_field :contact_name %>
+</div>
+
+<div>
+        <%= f.label :contact_email %>   
+        <%= f.text_field :contact_email %>
+</div>
+
+<div><%= recaptcha_tags %></div>
+
+<div> <%= f.submit %> </div>
+
+<% end %>
+
+<dl>
+<% @posts.each do | post | %>
+<dt><%= post.title %></dt>
+<dd>
+        <p><%= post.content %></p>
+        <p><%= post.contact_name %> - <%= post.contact_email %></p>
+</dd>
+<% end %>
+</dl>

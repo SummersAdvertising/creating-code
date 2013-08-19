@@ -1,0 +1,53 @@
+<%= form_for([:admin, @user]) do | f | %>
+<section class="hgroup">
+      <h2><img src="<%= image_path("man.png") %>" width="16" height="16"> 個人資料</h2>
+    </section>
+    <!--hgroup-->
+    <section class="text text-edit">
+      <div class="half">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top"><%= f.label :email, '帳號' %>：</th>
+            <td><%= f.text_field :email, :placeholder => "請輸入信箱"  %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="half">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top"><%= f.label :name, '姓名' %>：</th>
+            <td><%= f.text_field :name, :placeholder => "請輸入使用者姓名"  %></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!--text-->
+    <section class="hgroup">
+      <h2><img src="<%= image_path("psw.png") %>" width="16" height="16"> <%= f.label :password, '修改密碼' %></h2>
+      <p>(如不修改密碼可不填此欄)</p>
+    </section>
+    <!--hgroup-->
+    <section class="text text-edit">
+      <div class="half">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top"><%= f.label :password, '新密碼' %>：</th>
+            <td><%= f.password_field :password %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="half">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top"><%= f.label :name, '確認密碼' %>：</th>
+            <td><%= f.password_field :password_confirmation %></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!--text-->
+    <section class="button"> 
+    <%= f.submit '',{ :style => 'display: none;' } %><a href="javascript: $('input:submit[name=commit]').click();"><img src="<%= image_path("save.png") %>">儲存</a>
+    <a href="<%= admin_users_path %>"><img src="<%= image_path("cancel.png") %>">取消</a> </section>
+    <!--button--> 
+<% end %>

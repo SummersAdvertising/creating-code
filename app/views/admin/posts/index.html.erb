@@ -1,0 +1,23 @@
+<section class="list">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th align="left" class="x1">狀態</th>
+          <th align="left" class="x0 x2">日期</th>
+          <th align="left">留言人</th>
+          <th align="left" class="x1">刪除</th>
+        </tr>
+        
+        <% @posts.each do |post| %>
+        <tr>
+          <td><img src="<%= image_path( (post.status == 'enable' ? "check.png" : "cancel.png") ) %>" title="<%= (post.status == 'enabled' ? "顯示" : "隱藏") %>"></td>
+          <td class="x0"><%= post.created_at.to_s( :date ) %></td>
+          <td><%= link_to post.contact_name, edit_admin_post_path(post) %></td>
+          <td><%= link_to image_tag("delete.png"), admin_post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+</table>
+</section>  
+<section class="page">
+        <%= paginate @posts %>
+</section>
+<!--page-->
