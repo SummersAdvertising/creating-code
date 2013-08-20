@@ -45,7 +45,17 @@ class Admin::UsersController < AdminController
                                 format.html { redirect_to admin_users_path, :notice => '新增使用者成功' }
                         else
                                 @users = User.all
-                                format.html { render :index }
+                                
+                                messages = ''
+                                
+                                @user.errors.messages.each do | m |
+                                	messages += '<br />' + (m[1][1].nil? ? m[1][0].to_s : m[1][1].to_s)
+                                
+                                end
+                                
+                                flash[ :warning ] = "新增使用者失敗，請檢查以下訊息：<p>#{messages}</p>"
+                                                                
+                                format.html { render :index  }
                         end
                 end
         

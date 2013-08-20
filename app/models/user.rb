@@ -18,8 +18,10 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
   
+  validates_presence_of :password, :message => '密碼不得空白'
+  
   validates :email,     :uniqueness => true,
-                                                                :format => { :with => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i, :message => 'E-Mail 格式不符'  }
+                                  :format => { :with => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i, :message => 'E-Mail 格式不符'  }
   
   validates_uniqueness_of :email, :message => 'E-Mail 已有人使用。'
   

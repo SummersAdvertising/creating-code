@@ -1,5 +1,18 @@
 <%= form_for( [:admin, @user] ) do | f | %>
   
+  
+<% if @user.errors.any? %>
+
+<script>
+	$(document).ready(function() {
+		<% @user.errors.messages.each do | m | %>	
+		$('<p class="form-validation-tip"><%= m[1][1].nil? ? m[1][0] : m[1][1] %></p>').offset({ top: $('.field_with_errors input[name*=<%= m[0] %>]').offset().top }).insertBefore($('.field_with_errors input[name*=<%= m[0] %>]'));
+		<% end %>
+	});
+</script>
+
+<% end %>
+  
 <section class="text text-edit">
   <div class="quarter">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">

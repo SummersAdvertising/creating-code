@@ -20,6 +20,19 @@
   <%= javascript_include_tag "admin" %>
   <%= csrf_meta_tags %>
   
+  <script type="text/javascript">
+  	$(document).ready(function() {
+	  	
+	  	<% if !flash[ :notice ].nil? %>
+	  	Alertify.log.success("<%= flash[ :notice ] %>");
+	  	<% end %>
+	  	
+	  	<% if !flash[ :warning ].nil? %>	  	
+	  		Alertify.log.error("<%= flash[ :warning ].html_safe %>");
+	  	<% end %>
+  	});
+  </script>
+  
 </head>
 
 <body>

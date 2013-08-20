@@ -1,0 +1,4 @@
+activerecord:
+  errors:
+    messages:
+      confirmation: "密碼不符。"
