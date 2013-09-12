@@ -1,0 +1,11 @@
+<div class="limit">
+  <h1><%= link_to '創碼有限公司', root_url %></h1>
+  <ul>
+    <li class="nav-1 <%= 'active' if params[ :pagename ] == 'intro' %>"><a href="/intro">軟體介紹</a></li>
+    <li class="nav-2 <%= 'active' if params[ :pagename ] == 'contact' %>"><a href="#">軟體書籍</a></li>
+    <li class="nav-3 <%= 'active' if params[ :pagename ] == 'service' %>"><a href="/service">服務項目</a></li>
+    <li class="nav-4 <%= 'active' if params[ :pagename ] == 'about' %>"><a href="/about">關於創碼</a></li>
+    <li class="nav-5 <%= 'active' if params[ :pagename ] == 'contact' %>"><a href="/contact">聯絡我們</a></li>
+    <li class="nav-6 <%= 'active' if params[ :controller ] == 'posts' %>"><%= link_to 'Q&A', qa_path %></li>
+  </ul>
+</div>

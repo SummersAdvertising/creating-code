@@ -1,7 +1,7 @@
 set :application, 	"creating-code"
-set :domain, 		"li406-49.members.linode.com"
+set :domain, 		"psccc.com.tw"
 set :repository, 	"git@github.com:SummersAdvertising/creating-code.git"
-set :deploy_to,		"/var/spool/RoR-Projects/creating-code"
+set :deploy_to,		"/home/deploy/creating-code"
 
 role :app,		domain
 role :web,	domain
@@ -14,8 +14,8 @@ set :scm, :git
 set :branch, "master"
 set :scm_verbose, true
 set :use_sudo, false
-set :user, "apps"
-set :password, "1qaz2wsx"
+set :user, "deploy"
+set :password, "2wsx3edc"
 set :group, "webs"
 
 default_environment["PATH"] = "/opt/ree/bin:/usr/local/bin:/usr/bin:/bin:/usr/games"

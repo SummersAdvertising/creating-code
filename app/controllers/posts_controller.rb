@@ -19,7 +19,7 @@ class PostsController < ApplicationController
                 @post.status = 'enable' if @post.status == '0'
                   
                 respond_to do | format |
-                        if  @post.save
+                        if  verify_recaptcha && @post.save
                         		PostMailer.send_notify( @post ).deliver
                         		PostMailer.send_thank( @post ).deliver
                                 format.html { redirect_to posts_path, :notice => '留言已建立' }

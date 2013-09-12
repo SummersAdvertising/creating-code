@@ -42,9 +42,12 @@
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <th valign="top"><span>顯示</span></th>
-            <td>
-                <%= f.radio_button :status, 'enable', { :class => 'radio'} %> 是 
-                <%= f.radio_button :status, 'disable', { :class => 'radio'} %> 否
+            <td class="radioContainer">
+                <%= f.radio_button :status, 'enable', { :class => 'radio', :disabled => ('disabled' if @post.status == 'hidden')} %> 是 
+                <%= f.radio_button :status, 'disable', { :class => 'radio', :disabled => ('disabled' if @post.status == 'hidden')} %> 否
+                <% if @post.status == 'hidden' %>
+                	<%= f.radio_button :status, 'hidden', { :class => 'radio', :disabled => 'disabled'} %> 發問者勾選隱藏無法修改
+                <% end %>
             </td>
           </tr>
         </table>

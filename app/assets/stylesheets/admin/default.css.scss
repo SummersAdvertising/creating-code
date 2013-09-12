@@ -140,8 +140,10 @@ border-radius:5px;width:302px;margin:0 auto}
 .text-edit input,.text-edit textarea, .field_with_errors input{width:100%;border-radius:5px;border:1px solid #ccc!important;padding:5px;font:300 13px 新細明體;background:#fff;color:#555}
 .text-edit textarea{min-height:100px}
 .text-edit th{padding:7px 0 0 0}
-.text-edit .radio{width:30px;border:none;padding:0;position:relative;top:3px}
-.text-edit #checkbox{width:30px;position:relative;top:4px}
+.text-edit .radio{width:18px;border:none;padding:0;position:relative; margin-left: 20px;}
+.text-edit #checkbox{width:30px;position:relative;top:4px;}
+
+.radioContainer{ padding-top: 3px; }
 
 .text-show .part{margin:10px;line-height:1.7em;float:none;padding:0}
 .text-show img{max-width:100%;height:auto}

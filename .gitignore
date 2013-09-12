@@ -19,3 +19,5 @@ config/deploy.rb
 config/deploy/*
 
 public/assets/*
+
+config/database.yml
