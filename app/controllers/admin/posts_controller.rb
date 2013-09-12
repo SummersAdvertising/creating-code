@@ -37,6 +37,8 @@ class Admin::PostsController < AdminController
         @post.response_time = Time.now
       
         @post.save
+        
+        PostMailer.send_response( @post ).deliver
       
         format.html { redirect_to admin_posts_path, notice: 'Post was successfully updated.' }
         format.json { head :no_content }

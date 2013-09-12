@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
         def index
                 
                 respond_to do | format |
-                        format.html {  }
+                        format.html { render :layout => false  }
                 end
                 
         end

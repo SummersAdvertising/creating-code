@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>收到了新的使用者詢問 - 創碼公司</title>
+		
+		<style>
+			table {				
+				border: 2px #000 solid;
+				width: 80%;
+				margin: 20px auto;
+				border-collapse: collapse;
+			}
+			
+			td {
+				border: 1px #222 solid;			
+				padding: 6px 16px;	
+			}
+			
+			th {
+				border: 1px #222 solid;			
+				text-align: left;
+				padding: 6px 16px;
+				width: 10%;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<%= @post.contact_name %> 您好，
+		
+		您的問題已於 <%= @post.response_time.to_s %> 得到了答覆，內容如下:
+		
+		<table >
+			<tr>
+				<th>詢問內容</th>
+				<td>
+					<%= @post.content.gsub(/\n/, '<br>').html_safe %>
+				</td>
+			</tr>
+			<tr>
+				<th>回覆內容</th>
+				<td>
+					<%= @post.response.gsub(/\n/, '<br>').html_safe %>
+				</td>
+			</tr>
+			
+		</table>
+	
+	</body>
+</html>

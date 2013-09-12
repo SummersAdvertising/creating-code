@@ -1,6 +1,6 @@
 CreatingCode::Application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { :sessions => "sessions" }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -10,6 +10,9 @@ CreatingCode::Application.routes.draw do
   resources :posts
   
   namespace :admin do
+  		
+  		match '/'		=> 'posts#index'
+  
         resources :users
         resources :posts
   

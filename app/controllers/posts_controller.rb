@@ -15,12 +15,17 @@ class PostsController < ApplicationController
         def create
         
                 @post = Post.new(params[ :post ])
-        
+                
+                @post.status = 'enable' if @post.status == '0'
+                  
                 respond_to do | format |
-                        if verify_recaptcha && @post.save
+                        if  @post.save
+                        		PostMailer.send_notify( @post ).deliver
+                        		PostMailer.send_thank( @post ).deliver
                                 format.html { redirect_to posts_path, :notice => '留言已建立' }
-                        else                            
-                                format.html { render :index, :warning =>( verify_recaptcha ? '請重新檢查欄位。' : '請輸入正確的驗證碼。')  }
+                        else                          
+                        		flash[ :warning ] = ( @post.errors.full_messages.any? ? '請重新檢查欄位。' : '請輸入正確的驗證碼。') 
+                                format.html { render :index }
                         end
                 end
         
@@ -28,7 +33,7 @@ class PostsController < ApplicationController
 
 private
         def get_posts
-                @posts = Post.where( :status => 'enable' ).order( :created => :desc )
+                @posts = Post.where( 'NOT ISNULL( response_user_id )' ).order( "created_at DESC" )
         end
 
 end

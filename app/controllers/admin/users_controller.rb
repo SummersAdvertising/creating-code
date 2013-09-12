@@ -79,11 +79,13 @@ class Admin::UsersController < AdminController
                 end
                 params[:user].delete( :status )
                 params[:user].delete( :auth )
-        
+                
                 respond_to do | format |
                         if @user.update_attributes( params[ :user ] )
                                 format.html { redirect_to admin_users_path }
                         else
+        params[ :dump ] = @user.errors
+        exit
                                 format.html { render :edit }
                         end
                         

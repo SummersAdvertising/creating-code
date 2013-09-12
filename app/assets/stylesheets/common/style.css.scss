@@ -1,0 +1,27 @@
+
+html{width:100%}
+body{font:300 16px "微軟正黑體",Microsoft JhengHei}
+a{font:300 16px "微軟正黑體",Microsoft JhengHei;text-decoration:none}
+.limit{width:1024px;margin:0 auto;position:relative}
+
+#top{height:65px;background:image-url("top.jpg") center 0 no-repeat #13374D}
+#top h1{float:left;position:relative;top:5px}
+#top h1 a{display:block;background:image-url("h1.png") 0 0 no-repeat;width:222px;height:50px;text-indent:-7777px}
+#top ul{overflow:hidden;width:600px;position:absolute;right:0;top:0;height:65px;padding:35px 0 0 0}
+#top ul li{float:left;width:100px}
+#top ul a{color:#ececec;font:300 16px "微軟正黑體",Microsoft JhengHei;padding:0 0 7px 0}
+#top ul a:hover,#top ul .active a{color:#91F3FE}
+#top ul .active a{border-bottom:3px solid #91F3FE;text-shadow:0 0 25px #91F3FE;}
+
+#banner{height:100px;background:image-url("banner.jpg") center 0 repeat-x;padding:35px 0 0 0}
+#banner h2{font:300 55px "Helvetica",微軟正黑體,Microsoft JhengHei;color:#fff;letter-spacing:.1em}
+
+#crumb{height:80px;padding:10px 0 0 0}
+#crumb,#crumb a{font-size:14px;color:#02263a}
+#crumb a:hover{border-bottom:1px solid #02263a}
+
+#container{background:image-url("content.gif");padding:0 0 50px 0;}
+
+#footer{background:#02263A;color:#fff;padding:25px 0 20px 0;font-size:14px; clear: both;}
+
+.warning{ color: red; }

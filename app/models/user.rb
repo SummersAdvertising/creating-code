@@ -14,11 +14,13 @@ class User < ActiveRecord::Base
   
   before_save :initial_attributes
   
+  has_many :posts
+  
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
   
-  validates_presence_of :password, :message => '密碼不得空白'
+#  validates_presence_of :password, :message => '密碼不得空白'
   
   validates :email,     :uniqueness => true,
                                   :format => { :with => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i, :message => 'E-Mail 格式不符'  }
