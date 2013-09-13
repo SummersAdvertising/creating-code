@@ -1,5 +1,7 @@
 
   <%= stylesheet_link_tag    "qa", :media => "all" %>
+  <%= javascript_include_tag "admin/alertify.min.js" %>
+  
 
 <div id="header" _height="none">
   <div id="top">
@@ -18,7 +20,9 @@
 	
 	<script>
 		<% if flash[ :warning ] %>
-			alert('<%=flash[ :warning ]%>');
+			Alertify.dialog.alert('<%=flash[ :warning ]%>');
+		<% else %>
+			Alertify.log.success('<%=flash[ :notice ]%>');
 		<% end %>
 		
 	</script>
