@@ -1,5 +1,5 @@
 set :application, 	"creating-code"
-set :domain, 		"www.psccc.com.tw"
+set :domain, 		"beta.psccc.com.tw"
 set :repository, 	"git@github.com:SummersAdvertising/creating-code.git"
 set :deploy_to,		"/home/deploy/creating-code"
 
