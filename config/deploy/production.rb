@@ -25,7 +25,7 @@ namespace :deploy do
 	task :restart do
 		run "ln -s  #{shared_path}/uploads/ #{current_path}/public/uploads"
 		
-		run "cd #{current_path}; RAILS_ENV=production rake db:migrate; RAILS_ENV=production rake cache:clear"
+		run "cd #{current_path}; RAILS_ENV=production rake db:migrate; RAILS_ENV=production rake cache:clear; touch tmp/restart.txt"
 	end
 end
 
@@ -36,4 +36,3 @@ before("deploy:finalize_update") do
 	run "cp #{db_config} #{release_path}/config/database.yml"
 	
 end
-
