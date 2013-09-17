@@ -21,7 +21,9 @@
 	<script>
 		<% if flash[ :warning ] %>
 			Alertify.dialog.alert('<%=flash[ :warning ]%>');
-		<% else %>
+		<% end %>
+		
+		<% if flash[ :notice ] %>
 			Alertify.log.success('<%=flash[ :notice ]%>');
 		<% end %>
 		
