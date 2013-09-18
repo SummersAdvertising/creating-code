@@ -1,4 +1,13 @@
 zh-TW:
+  static_pages:
+    title:
+      contact: "聯絡我們"
+      intro: "軟體介紹"
+      about: "關於創碼"
+      books: "軟體書籍"
+      service: "服務項目"
+    
+
   errors:
     messages:
       not_found: "沒有找到"

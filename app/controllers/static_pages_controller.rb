@@ -1,6 +1,8 @@
 class StaticPagesController < ApplicationController
 		def show
 			
+			$meta_title = t( "static_pages.title." + params[ :pagename ] )
+			
 			@pagename = params[ :pagename ]
 		
 			respond_to do | format |

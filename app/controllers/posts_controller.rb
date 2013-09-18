@@ -4,6 +4,9 @@ class PostsController < ApplicationController
         before_filter :get_posts
 
         def index
+        		
+        		$meta_title = "Q&A"
+        		        
                 @post = Post.new
         
                 respond_to do | format |
@@ -14,20 +17,20 @@ class PostsController < ApplicationController
         
         def create
         
-                @post = Post.new(params[ :post ])
-                
-                @post.status = 'enable' if @post.status == '0'
-                  
-                respond_to do | format |
-                        if  verify_recaptcha && @post.save
-                        		PostMailer.send_notify( @post ).deliver
-                        		PostMailer.send_thank( @post ).deliver
-                                format.html { redirect_to posts_path, :notice => '留言已建立' }
-                        else                          
-                        		flash[ :warning ] = ( @post.errors.full_messages.any? ? '請重新檢查欄位。' : '請輸入正確的驗證碼。') 
-                                format.html { render :index }
-                        end
-                end
+            @post = Post.new(params[ :post ])
+            
+            @post.status = 'enable' if @post.status == '0'
+              
+            respond_to do | format |
+                    if  verify_recaptcha && @post.save
+                    		PostMailer.send_notify( @post ).deliver
+                    		PostMailer.send_thank( @post ).deliver
+                            format.html { redirect_to posts_path, :notice => '留言已建立' }
+                    else                          
+                    		flash[ :warning ] = ( @post.errors.full_messages.any? ? '請重新檢查欄位。' : '請輸入正確的驗證碼。') 
+                            format.html { render :index }
+                    end
+            end
         
         end
 
