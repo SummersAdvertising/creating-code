@@ -13,6 +13,8 @@ class StaticPagesController < ApplicationController
 
         def index
                 
+                $meta_title = t( "static_pages.title.index" );
+                
                 respond_to do | format |
                         format.html { render :layout => false  }
                 end
