@@ -2,7 +2,7 @@
   <h1><%= link_to '創碼有限公司', root_url %></h1>
   <ul id="nav">
     <li class="nav-1 <%= 'active' if params[ :pagename ] == 'intro' %>"><a href="/intro">軟體介紹</a></li>
-    <li class="<%= 'active' if params[ :pagename ] == 'product' || params[ :pagename ] == 'info' %>"><a>現有產品</a>
+    <li class="<%= 'active' if ['product', 'info', 'feature','detail'].include? params[ :pagename ] %>"><a>現有產品</a>
       <div class="menu"> <a href="/product">機率模型軟體</a><br>
         <a href="/info">機率分配模擬器與統計分析軟體</a> </div>
     </li>
