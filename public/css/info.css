@@ -1,0 +1,51 @@
+
+/*-----------------------------------------------------------------------頁身---*/
+
+#content{width:100%;margin:0 auto;font-size:15px;line-height:1.7em;overflow:hidden}
+#content .article{margin:0 0 50px 0}
+
+/*-----------------------------------------------------------------------左側欄---*/
+
+#content .left{width:325px;float:left}
+#content .left h3{color:#3c590b;font:300 26px "微軟正黑體",Microsoft JhengHei;line-height:1.3em;background:url(../images/index-03.gif) 0 0 no-repeat;height:130px;
+padding:70px 0 0 0;text-align:right}
+#content .left ul{margin:20px 0;padding:10px 0;border-top:1px solid #C2C2C2}
+#content .left li{text-align:right;margin:15px 0;padding:0 50px 0 0}
+#content .left li a{font-size:18px;color:#000}
+#content .left li a:hover{color:#e12954}
+#content .left .active{background:url(../images/if-03.jpg) right center no-repeat}
+#content .left .active a{color:#e12954}
+
+#content .left .bt{text-align:center;padding:20px 0;border-top:1px solid #E9E9E9;border-bottom:1px solid #E9E9E9}
+#content .left .bt a{display:inline-block;background:url(../images/if-01.jpg) 0 0 no-repeat;width:185px;height:41px;}
+#content .left .bt a:hover{background:url(../images/if-02.jpg) 0 0 no-repeat}
+
+/*-----------------------------------------------------------------------右側欄---*/
+
+#content .right{width:630px;float:right}
+#content p{padding:10px 0;line-height:2em}
+#content b{color:#008339;font-weight:900;font-size:16px}
+
+#content b span{display:inline-block;width:25px;height:25px;color:#fff;background:#008339;border-radius:50%;text-align:center;margin:0 5px 0 0;font-size:13px}
+#content .child{color:#000!important}
+
+/*-----------------------------------------------------------------------軟體說明---*/
+
+#info h4{background:#E02954;color:#fff;border-radius:50%;width:65px;height:65px;text-align:center;font:900 26px "微軟正黑體",Microsoft JhengHei;padding:15px 0 0 0;margin:70px 0 10px 0}
+
+/*-----------------------------------------------------------------------功能解釋---*/
+
+#detail{padding:103px 0 0 0}
+#detail h5{font:300 26px "微軟正黑體",Microsoft JhengHei;padding:0 0 10px 0}
+#detail th{background:#678916;color:#fff;border:1px solid #ddd;text-align:left;
+font:300 16px "微軟正黑體",Microsoft JhengHei;padding:10px 0 10px 30px}
+#detail td{border:1px solid #ddd;padding:10px 0 10px 30px}
+#detail tr:nth-child(2n) td{background:#EEEEEE}
+#detail a{color:#010101}
+#detail a:hover{color:#678916}
+
+/*-----------------------------------------------------------------------軟體特色---*/
+
+#feature{padding:74px 0 0 0}
+#feature h5{font:300 2.5em "微軟正黑體",Microsoft JhengHei;padding:20px 0;color:#0e5e7d}
+#feature p{margin:0 0 20px 0}

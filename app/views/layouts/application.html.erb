@@ -4,14 +4,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <%= render 'layouts/meta' %>
 
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  
+  <%= stylesheet_link_tag    "application", :media => "all" %>  
   <%= stylesheet_link_tag @pagename if params[ :controller ] == 'static_pages' %>
   
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   
-  
+  </head>
+
+<body>
+	<%= yield %>
+<div id="footer" _height="none">
+  <div class="limit"> © 2013 Createing Code Company. All rights reserved. </div>
+  <!--limit--></div>
+<!--footer-->
+
+
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -40,13 +48,7 @@
 		</div>
 	</noscript>
 
-</head>
 
-<body>
-	<%= yield %>
-<div id="footer" _height="none">
-  <div class="limit"> © 2013 Createing Code Company. All rights reserved. </div>
-  <!--limit--></div>
-<!--footer-->
+
 </body>
 </html>
