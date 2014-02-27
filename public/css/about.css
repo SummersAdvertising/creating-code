@@ -1,4 +1,5 @@
 
+
 #content{width:890px;margin:0 auto;overflow:hidden;font-size:15px;line-height:1.7em}
 
 #content .left{width:62%;float:left}
@@ -7,7 +8,8 @@
 #content .right{width:38%;float:right;padding:0 0 0 20px}
 #content .right div{padding:150px 0 0 50px}
 #content .right h3{font:300 36px "微軟正黑體",Microsoft JhengHei;height:50px}
-#content .up{background:url(../images/index-02.gif) center 0 no-repeat;margin:0 0 70px 0}
+#content .up{background:url(/images/index-02.gif) center 0 no-repeat;margin:0 0 70px 0}
 #content .up h3{color:#0e5e7d}
-#content .down{background:url(../images/index-03.gif) center 0 no-repeat}
+#content .down{background:url(/images/index-03.gif) center 0 no-repeat}
+
 #content .down h3{color:#3c590b}

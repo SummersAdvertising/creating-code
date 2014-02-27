@@ -6,12 +6,13 @@
 .article a{color:#3E520F;font-size:14px;line-height:1.7em}
 .article a:hover{text-decoration:underline}
 
-.left h3{background:url(../images/index-02.gif) 0 0 no-repeat;color:#0e5e7d}
-.right h3{background:url(../images/index-03.gif) 0 0 no-repeat;color:#3c590b}
+.left h3{background:url(/images/index-02.gif) 0 0 no-repeat;color:#0e5e7d}
+.right h3{background:url(/images/index-03.gif) 0 0 no-repeat;color:#3c590b}
 
 .article h4{color:#E02954;font:900 20px "微軟正黑體",Microsoft JhengHei;height:40px;}
 .article th{background:#678916;color:#fff;padding:10px 0}
 .article tr:nth-child(2n){background:#eee}
 .article table{border:1px solid #ddd;border-bottom:none;margin:0 0 50px 0}
+
 
 .article td{padding:5px;border-bottom:1px solid #ddd}
