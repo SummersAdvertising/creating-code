@@ -4,9 +4,13 @@ class StaticPagesController < ApplicationController
 			$meta_title = t( "static_pages.title." + params[ :pagename ] )
 			
 			@pagename = params[ :pagename ]
-		
+			
 			respond_to do | format |
-				format.html { render 'static_pages/' + I18n.locale.to_s + '/' + @pagename }
+				if @pagename == 'index'
+					format.html { redirect_to root_url }
+				else
+					format.html { render 'static_pages/' + I18n.locale.to_s + '/' + @pagename }
+				end
 			end
 		
 		end
