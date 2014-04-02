@@ -38,7 +38,7 @@ class Admin::PostsController < AdminController
       
         @post.save
         
-        PostMailer.send_response( @post ).deliver
+        # PostMailer.send_response( @post ).deliver
       
         format.html { redirect_to admin_posts_path, notice: 'Post was successfully updated.' }
         format.json { head :no_content }
