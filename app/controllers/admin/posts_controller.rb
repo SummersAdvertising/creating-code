@@ -40,7 +40,7 @@ class Admin::PostsController < AdminController
         
         # PostMailer.send_response( @post ).deliver
       
-        format.html { redirect_to admin_posts_path, notice: 'Post was successfully updated.' }
+        format.html { redirect_to admin_posts_path, notice: '回應成功' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -56,7 +56,7 @@ class Admin::PostsController < AdminController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_posts_url }
+      format.html { redirect_to admin_posts_url, notice: '刪除留言完成' }
       format.json { head :no_content }
     end
   end
