@@ -17,5 +17,5 @@ text-align:center;padding:35px 0;font-weight:900;background:#EFF7FB}
 #content span{font-size:.8em;line-height:1.5em}
 
 #content .bt{padding:50px 0;text-align:center}
-#content .bt a{display:inline-block;background:url(zh/images/pr-01.jpg) 0 0 no-repeat;width:325px;height:70px}
-#content .bt a:hover{background:url(zh/images/pr-02.jpg) 0 0 no-repeat}
+#content .bt a{display:inline-block;background:url(/zh/images/pr-01.jpg) 0 0 no-repeat;width:325px;height:70px}
+#content .bt a:hover{background:url(/zh/images/pr-02.jpg) 0 0 no-repeat}

@@ -10,7 +10,7 @@ class PostsController < ApplicationController
                 @post = Post.new
         
                 respond_to do | format |
-                        format.html
+                        format.html { render "posts/#{I18n.locale.to_s}_index" }
                 end
         
         end

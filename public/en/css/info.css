@@ -9,18 +9,18 @@
 /*-----------------------------------------------------------------------左側欄---*/
 
 #content .left{width:325px;float:left}
-#content .left h3{color:#3c590b;font:300 20px "arial",Microsoft JhengHei;line-height:1.3em;background:url(en/images/index-03.gif) 0 0 no-repeat;height:130px;
+#content .left h3{color:#3c590b;font:300 20px "arial",Microsoft JhengHei;line-height:1.3em;background:url(/en/images/index-03.gif) 0 0 no-repeat;height:130px;
 padding:20px 0 0 0;text-align:right}
 #content .left ul{margin:20px 0;padding:10px 0;border-top:1px solid #C2C2C2}
 #content .left li{text-align:right;margin:15px 0;padding:0 50px 0 0}
 #content .left li a{font-size:18px;color:#000}
 #content .left li a:hover{color:#e12954}
-#content .left .active{background:url(en/images/if-03.jpg) right center no-repeat}
+#content .left .active{background:url(/en/images/if-03.jpg) right center no-repeat}
 #content .left .active a{color:#e12954}
 
 #content .left .bt{text-align:center;padding:20px 0;border-top:1px solid #E9E9E9;border-bottom:1px solid #E9E9E9}
-#content .left .bt a{display:inline-block;background:url(en/images/if-01.jpg) 0 0 no-repeat;width:185px;height:41px;}
-#content .left .bt a:hover{background:url(en/images/if-02.jpg) 0 0 no-repeat}
+#content .left .bt a{display:inline-block;background:url(/en/images/if-01.jpg) 0 0 no-repeat;width:185px;height:41px;}
+#content .left .bt a:hover{background:url(/en/images/if-02.jpg) 0 0 no-repeat}
 
 /*-----------------------------------------------------------------------右側欄---*/
 

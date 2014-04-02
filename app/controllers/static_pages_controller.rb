@@ -16,7 +16,11 @@ class StaticPagesController < ApplicationController
                 $meta_title = t( "static_pages.title.index" );
                 
                 respond_to do | format |
+                	if params[ :locale ].nil?
+                		format.html { render :layout => false, :template => 'static_pages/index'  }
+                	else
                         format.html { render :layout => false, :template => 'static_pages/' + I18n.locale.to_s + '/index'  }
+                    end
                 end
                 
         end

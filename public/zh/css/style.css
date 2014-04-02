@@ -8,9 +8,9 @@ a{font:300 16px "微軟正黑體",Microsoft JhengHei;text-decoration:none}
 
 /*-----------------------------------------------------------------------導航---*/
 
-#top{min-width:1024px;height:65px;background:url(zh/images/top.jpg) center 0 no-repeat #13374D;position:fixed;z-index:1;width:100%}
+#top{min-width:1024px;height:65px;background:url(/zh/images/top.jpg) center 0 no-repeat #13374D;position:fixed;z-index:1;width:100%}
 #top h1{float:left;position:relative;top:5px}
-#top h1 a{display:block;background:url(zh/images/h1.png) 0 0 no-repeat;width:222px;height:50px;text-indent:-7777px}
+#top h1 a{display:block;background:url(/zh/images/h1.png) 0 0 no-repeat;width:222px;height:50px;text-indent:-7777px}
 
 #nav{float:right;padding:35px 0 0 0}
 #nav li{float:left;margin:0 10px}
@@ -40,7 +40,7 @@ body:not(:-moz-handler-blocked) #nav > li > a {padding:0 0 4px 0}
 
 /*-----------------------------------------------------------------------頁首---*/
 
-#banner{min-width:1024px;height:165px;background:url(zh/images/banner.jpg) center bottom repeat-x;padding:85px 0 0 0}
+#banner{min-width:1024px;height:165px;background:url(/zh/images/banner.jpg) center bottom repeat-x;padding:85px 0 0 0}
 #banner h2{font:300 55px "Helvetica",微軟正黑體,Microsoft JhengHei;color:#fff;letter-spacing:.1em}
 
 /*-----------------------------------------------------------------------頁身---*/
@@ -49,7 +49,7 @@ body:not(:-moz-handler-blocked) #nav > li > a {padding:0 0 4px 0}
 #crumb,#crumb a{font-size:14px;color:#02263a}
 #crumb a:hover{border-bottom:1px solid #02263a}
 
-#container{background:url(zh/images/content.gif);padding:0 0 50px 0;}
+#container{background:url(/zh/images/content.gif);padding:0 0 50px 0;}
 
 /*-----------------------------------------------------------------------頁尾---*/
 
