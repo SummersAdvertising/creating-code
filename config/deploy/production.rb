@@ -34,6 +34,6 @@ before("deploy:finalize_update") do
 	db_config = "#{shared_path}/config/database.yml.production"
 	#db_config = "#{db_config} #{release_path}/config/database.yml.production"
 	run "cp #{db_config} #{release_path}/config/database.yml"
-	run "mkdir"
+	run "mkdir #{release_path}/config/environments; cp #{shared_path}/config/environment.rb.production #{release_path}/config/environments/production.rb"
 	
 end

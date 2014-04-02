@@ -1,4 +1,5 @@
 zh:
   errors:
-    messages:
-      confirmation: "密碼不符。"
+    form:
+      validation: '表格填寫有誤，請重新檢查'
+      captcha: '驗證碼錯誤，請重新檢查'
