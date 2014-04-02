@@ -21,3 +21,5 @@ config/deploy/*
 public/assets/*
 
 config/database.yml
+config/environments
+config/environments/*
