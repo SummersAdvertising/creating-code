@@ -19,7 +19,7 @@ text-align:center;padding:35px 0;font-weight:900;background:#EFF7FB}
 
 .download{overflow:hidden}
 .download a{display:block;width:33%;height:55px;border:3px solid transparent;padding:5px 0 0 15px;color:#555;float:left;font-size:.9em}
-.download a:hover{border:3px solid #C1E2F3;text-decoration:none!important;/*background:url(/images/icon-13.png) 95% center no-repeat*/}
+.download a:hover{border:3px solid #C1E2F3;text-decoration:none!important;/*background:url(zh/images/icon-13.png) 95% center no-repeat*/}
 .download a img{height:25px;width:auto;position:relative;top:5px;margin:0 10px 0 0}
 .download h4{background:#A8D1E6;width:98%;padding:5px 15px;margin:0 0 15px 0;color:#fff;font:300 1.4em "微軟正黑體",Microsoft JhengHei}
 
