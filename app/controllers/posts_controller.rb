@@ -25,10 +25,11 @@ class PostsController < ApplicationController
                     if  verify_recaptcha && @post.save
                     		PostMailer.send_notify( @post ).deliver
                     		PostMailer.send_thank( @post ).deliver
-                            format.html { redirect_to posts_path, :notice => '留言已建立' }
-                    else                          
+                            format.html { redirect_to qa_path, :notice => '留言已建立' }
+                    else
+                    
                     		flash[ :warning ] = ( @post.errors.full_messages.any? ? '請重新檢查欄位。' : '請輸入正確的驗證碼。') 
-                            format.html { render :index }
+                            format.html { render "posts/#{I18n.locale.to_s}_index" }
                     end
             end
         
