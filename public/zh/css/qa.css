@@ -1,0 +1,29 @@
+html{background:url(/images/content.gif)}
+
+#content{}
+#content .left{width:32%;float:left}
+#content .right{width:67%;float:right}
+
+.left td{padding:5px 0;position:relative}
+.left .alert{margin:0;position:absolute;right:-5px;top:-12px;color:#fff;background:#F05B01;padding:3px 5px;border-radius:5px}
+.left .alert img{position:absolute;bottom:-8px;left:8px}
+
+.left .text,.left textarea{width:100%;border:3px solid #EEEEEE;border-radius:5px;padding:7px 5px;
+font:300 14px "微軟正黑體",Microsoft JhengHei;color:#333}
+.left textarea{min-width:100%;max-width:320px;height:250px;margin:10px 0 0 0}
+.left span{font-size:13px;margin:0 0 0 23px}
+.left .checkbox{border:3px solid #EEEEEE!important;border-radius:5px}
+.left .button{width:200px;height:41px;background:url(/images/qa-send.jpg) 0 0 no-repeat;border:none;cursor:pointer}
+.left .button:hover{;background:url(/images/qa-sendh.jpg) 0 0 no-repeat;position:relative;top:1px}
+
+.right .msg{background:#F9FAFA;border:2px solid #F2F4F5;border-radius:5px;padding:20px;margin:0 0 15px 0}
+.right .msg td{padding:10px 15px;line-height:1.7em}
+.right .msg td span{font-size:13px;}
+.right .msg-q th{background:url(/images/qa-q.gif) right top no-repeat;color:#f05b01}
+.right .msg-q td{background:#FDF5DA;border-radius:0 10px 10px 10px}
+.right .msg-q span{color:#f05b01}
+.right .hidden p{color:#4d8a19}
+.right .msg-a{margin:15px 0 0 0}
+.right .msg-a th{background:url(/images/qa-a.gif) left top no-repeat;color:#3088cb}
+.right .msg-a td{background:#ededed;border-radius:10px 0 10px 10px}
+

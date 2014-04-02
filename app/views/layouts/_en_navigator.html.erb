@@ -1,0 +1,17 @@
+<div class="lg"><a href="/en/">English</a> / <a href="/zh/">中文</a></div>
+<div class="limit">
+  <h1><%= link_to 'Creating Code Company', root_url %></h1>
+  <ul id="nav">
+    <li class="nav-1 <%= 'active' if params[ :pagename ] == 'intro' %>"><a href="/en/intro">Software</a></li>
+    <li class="<%= 'active' if ['product', 'info', 'feature','detail'].include? params[ :pagename ] %>"><a>Product</a>
+      <div class="menu"> <a href="/en/product">Probability model software</a><br>
+        <a href="/en/info">Probability distribution stimulator and statistical analysis software</a> </div>
+    </li>
+    <li class="nav-3 <%= 'active' if params[ :pagename ] == 'service' %>"><a href="/en/service">Service</a></li>
+    <li class="<%= 'active' if params[ :pagename ] == 'price' %>"><a href="/en/price">Price</a></li>
+    <li class="<%= 'active' if params[ :pagename ] == 'buydl' %>"><a href="/en/buydl">Purchase/Download</a> </li>
+    <li class="nav-4 <%= 'active' if params[ :pagename ] == 'about' %>"><a href="/en/about">About</a></li>
+    <li class="nav-5 <%= 'active' if params[ :pagename ] == 'contact' %>"><a href="/en/contact">Contact</a></li>
+    <li class="nav-6 <%= 'active' if params[ :controller ] == 'posts' %>"><%= link_to 'Q&A', qa_path %></li>
+  </ul>
+</div>

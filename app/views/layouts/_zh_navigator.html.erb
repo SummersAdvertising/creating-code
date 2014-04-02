@@ -1,0 +1,17 @@
+<div class="lg"><a href="/en/">English</a> / <a href="/zh/">中文</a></div>
+<div class="limit">
+  <h1><%= link_to '創碼有限公司', root_url %></h1>
+  <ul id="nav">
+    <li class="nav-1 <%= 'active' if params[ :pagename ] == 'intro' %>"><a href="/zh/intro">軟體介紹</a></li>
+    <li class="<%= 'active' if ['product', 'info', 'feature','detail'].include? params[ :pagename ] %>"><a>現有產品</a>
+      <div class="menu"> <a href="/zh/product">機率模型軟體</a><br>
+        <a href="/zh/info">機率分配模擬器與統計分析軟體</a> </div>
+    </li>
+    <li class="nav-3 <%= 'active' if params[ :pagename ] == 'service' %>"><a href="/zh/service">服務項目</a></li>
+    <li class="<%= 'active' if params[ :pagename ] == 'price' %>"><a href="/zh/price">產品售價</a></li>
+    <li class="<%= 'active' if params[ :pagename ] == 'buydl' %>"><a href="/zh/buydl">購買/下載</a> </li>
+    <li class="nav-4 <%= 'active' if params[ :pagename ] == 'about' %>"><a href="/zh/about">關於創碼</a></li>
+    <li class="nav-5 <%= 'active' if params[ :pagename ] == 'contact' %>"><a href="/zh/contact">聯絡我們</a></li>
+    <li class="nav-6 <%= 'active' if params[ :controller ] == 'posts' %>"><%= link_to 'Q&A', qa_path %></li>
+  </ul>
+</div>

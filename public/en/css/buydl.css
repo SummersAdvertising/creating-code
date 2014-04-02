@@ -1,0 +1,31 @@
+
+#content{width:800px;margin:0 auto;font-size:15px;line-height:1.7em}
+#intro{border-radius:10px;border:1px solid #e0e0e0;color:#117884;
+text-align:center;padding:35px 0;font-weight:900;background:#EFF7FB}
+
+#content .article{margin:0 0 50px 0}
+
+#content h3{font:900 2em "微軟正黑體",Microsoft JhengHei;padding:20px 0;color:#0e5e7d}
+#content h3 span{font-size:.5em;font-weight:900;color:#E02954}
+
+#content b{font:900 1.2em "微軟正黑體",Microsoft JhengHei;color:#e02954;line-height:1.7em}
+
+#content p{padding:10px 0}
+#content span{font-size:.8em;line-height:2.5em;}
+#content a:hover{text-decoration:underline}
+
+#msg{font:900 16px "微軟正黑體",Microsoft JhengHei;line-height:1.7em;margin:20px 0}
+#msg a{font:900 16px "微軟正黑體",Microsoft JhengHei}
+#msg h4{font:900 2em "微軟正黑體",Microsoft JhengHei;color:#e02954}
+
+.download{overflow:hidden}
+.download a{display:block;width:33%;height:55px;border:3px solid transparent;padding:5px 0 0 15px;color:#555;float:left;font-size:.9em}
+.download a:hover{border:3px solid #C1E2F3;text-decoration:none!important;/*background:url(/images/icon-13.png) 95% center no-repeat*/}
+.download a img{height:25px;width:auto;position:relative;top:5px;margin:0 10px 0 0}
+.download h4{background:#A8D1E6;width:98%;padding:5px 15px;margin:0 0 15px 0;color:#fff;font:300 1.4em "微軟正黑體",Microsoft JhengHei}
+
+.download.full h4{width:100%}
+.download.full a{width:100%}
+
+#info{border-top:1px solid #ccc;margin:30px 0 0 0;padding:30px 0 0 0}
+#info strong{font-weight:900}

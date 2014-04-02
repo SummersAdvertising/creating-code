@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
 			@pagename = params[ :pagename ]
 		
 			respond_to do | format |
-				format.html { render @pagename }
+				format.html { render 'static_pages/' + I18n.locale.to_s + '/' + @pagename }
 			end
 		
 		end
@@ -16,7 +16,7 @@ class StaticPagesController < ApplicationController
                 $meta_title = t( "static_pages.title.index" );
                 
                 respond_to do | format |
-                        format.html { render :layout => false  }
+                        format.html { render :layout => false, :template => 'static_pages/' + I18n.locale.to_s + '/index'  }
                 end
                 
         end
