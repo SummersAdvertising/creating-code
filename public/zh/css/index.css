@@ -45,3 +45,7 @@ text-align:center;padding:35px 0;font-weight:900}
 a:hover #plus{
 	padding: 19px;
 }
+
+#fb{margin:0 auto 50px auto;width:449px;height:74px}
+#fb a{background:url(../images/fb.jpg) 0 0 no-repeat;width:449px;height:74px;display:inline-block;color:#fff;font-size:13px;padding:20px 0 0 95px}
+#fb a:hover{padding-top:19px}
