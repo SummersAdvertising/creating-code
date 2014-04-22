@@ -1,13 +1,19 @@
-
+﻿
 #content{width:890px;margin:0 auto;overflow:hidden;font-size:15px;line-height:1.7em}
 
 #content .left{width:62%;float:left}
 #content .left h3{color:#c20000;font:900 20px "微軟正黑體",Microsoft JhengHei}
 
 #content .right{width:38%;float:right;padding:0 0 0 20px}
-#content .right div{padding:150px 0 0 50px}
+#content .right .up,
+#content .right .down{padding:150px 0 0 50px}
 #content .right h3{font:300 36px "微軟正黑體",Microsoft JhengHei;height:50px}
 #content .up{background:url(/zh/images/index-02.gif) center 0 no-repeat;margin:0 0 70px 0}
 #content .up h3{color:#0e5e7d}
 #content .down{background:url(/zh/images/index-03.gif) center 0 no-repeat}
 #content .down h3{color:#3c590b}
+
+.social-link{margin:20px 0 0 0}
+.social-link a{display:block;width:240px;margin:0 auto;text-align:center;background:#EBF0F3;border:1px solid #D7D7D7;border-radius:10px;padding:10px 15px;color:#001f4d;font-size:14px;text-shadow:0 1px 0 #fff}
+.social-link a img{margin:0 0 10px 0}
+.social-link a:hover{background:#DEE7EC}
