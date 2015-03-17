@@ -1,0 +1,113 @@
+
+  <link rel="stylesheet" href="<%= "/#{I18n.locale.to_s}/css/qa.css" %>" />
+  <%= javascript_include_tag "admin/alertify.min.js" %>
+  
+  
+  <%= stylesheet_link_tag 'admin/alertify.css.scss' %>
+  <%= stylesheet_link_tag 'admin/alertify.default.css.scss' %>
+  <%= javascript_include_tag "admin/alertify.min.js" %>
+
+<div id="header" _height="none">
+  <div id="top">
+  <%= render 'layouts/zh_navigator' %>
+  </div>
+  <!--top-->
+  <div id="banner">
+    <div class="limit">
+      <h2>Q&amp;A</h2>
+    </div>
+  </div>
+  <!--banner--> 
+</div>
+<!--header-->
+<div id="container" _height="auto">
+	
+	<script>
+		<% if flash[ :warning ] %>
+			Alertify.dialog.alert('<%=flash[ :warning ]%>');
+		<% end %>
+		
+		<% if flash[ :notice ] %>
+			Alertify.log.success('<%=flash[ :notice ]%>');
+		<% end %>
+		
+	</script>
+	  <div class="limit">
+	    <div id="crumb"><a href="index.html">首頁</a> &gt; Q&amp;A</div>
+	    <!--crumb-->
+	    <div id="content"> 
+	      <!--------------------------------------------------------------------------------------------->
+	      <div class="left">
+		      <%= form_for @post do | f | %>	      
+	        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	          <tr>
+	            <td width="20%"><%= f.label :contact_name, "姓名：" %></td>
+	            <td width="80%"><%= f.text_field :contact_name, :class => "text", :placeholder => "請留下您的稱呼方式" %><%= check_warning(@post, :contact_name) %></td>
+	          </tr>
+	          <tr>
+	            <td><%= f.label :contact_email, 'Email：' %></td>
+	            <td><%= f.text_field :contact_email, :class => "text", :placeholder => "僅供聯絡用，不會公開" %> <%= check_warning(@post, :contact_email) %> </td>
+	          </tr>
+	          <tr>
+	            <td width="20%"><%= f.label :title, "主題：" %></td>
+	            <td width="80%"><%= f.text_field :title, :class => "text", :placeholder => "請留下您想詢問的概述" %><%= check_warning(@post, :title) %></td>
+	          </tr>
+	          <tr>        
+	            <td colspan="2"><%= f.label :content, "詢問內容：" %><br>
+	              <%= f.text_area :content, :placeholder => "請留下您的問題" %><%= check_warning(@post, :content) %></td>
+	          </tr>
+	          <tr>
+	            <td colspan="2">
+	            	<%= f.check_box :status, {:class => 'checkbox'}, "hidden"  %>
+	            	<%= f.label :status, "不要顯示我的留言" %><br>
+	              <span>服務人員會回覆到您填寫的Email信箱</span></td>
+	          </tr>
+	          <tr>
+	            <td colspan="2" style="height: 180px;"><%= recaptcha_tags %></td>
+	          </tr>
+	          
+	          <tr>
+	            <td colspan="2" align="center"><%= f.submit '', :class => "button" %></td>
+	          </tr>
+	        </table>
+	        <% end %>
+	      </div>
+	      <div class="right">
+		      <% @posts.each do | post | %>
+	        <div class="msg">
+		      	<% if post.status == 'enable' %>
+		          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="msg-q">
+		            <tr>
+		              <th width="17%" align="left" valign="top"><%= post.contact_name %></th>
+		              <td width="83%"><%= post.title %><span> - <%= post.created_at.to_s( :detailed ) %></span>
+		              <p><%= post.content %></p></td>
+		            </tr>
+		          </table>
+		          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="msg-a">
+		            <tr>
+		              <td width="81%"><span><%= post.response_time.to_s( :detailed )  %></span>
+		                <p><%= post.response %></p></td>
+		              <th width="19%" align="right" valign="top"><%= post.replier.name %></th>
+		            </tr>
+		          </table>
+		        <% else %>
+		          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="msg-q hidden">
+		            <tr>
+		              <th width="17%" align="left" valign="top"><%= post.contact_name %></th>
+		              <td width="83%"><span><%= post.created_at.to_s( :detailed )  %></span>
+		              <p>隱藏內容</p></td>
+		            </tr>
+		          </table>    
+		        <% end %>
+	        </div>
+	        <% end %>
+	      </div>
+	      <!---------------------------------------------------------------------------------------------> 
+	    </div>
+	    <!--content--> 
+	    <div style="clear: both"></div>
+	  </div>
+	 </div>
+	 
+</div>
+<!--container-->

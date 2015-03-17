@@ -1,6 +1,6 @@
 # encoding: utf-8
 class PostMailer < ActionMailer::Base
-  default from: "\"創碼公司\" <adwords@summers.com.tw>"
+  default from: "\"創碼公司\" <adam@summers.com.tw>"
 
   def send_notify( post )
   	@post = post
