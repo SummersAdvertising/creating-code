@@ -1,5 +1,6 @@
 # encoding: utf-8
 class Admin::PostsController < AdminController
+  layout 'layouts/admin'
   # GET /admin/posts
   # GET /admin/posts.json
   def index
